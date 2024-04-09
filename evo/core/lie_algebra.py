@@ -142,7 +142,7 @@ def is_se3(p):
     :return: True if p is in the SE(3) group
     """
     rot_valid = is_so3(p[:3, :3])
-    lower_valid = np.equal(p[3, :], np.array([0.0, 0.0, 0.0, 1.0])).all()
+    lower_valid = np.equal(p[3, :], np.array([0.0, 0.0, 0.0, 1.0])).all() #最后一行的格式
     return rot_valid and lower_valid
 
 
